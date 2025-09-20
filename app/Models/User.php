@@ -38,11 +38,13 @@ class User extends Authenticatable
      *
      * @return array<string, string>
      */
-    protected function casts(): array
-    {
-        return [
+    protected $casts = [
+        
             'email_verified_at' => 'datetime',
-            'password' => 'hashed',
+            
         ];
+
+        public function ventas(){
+            return $this->hasmany(venta::class);
+        }
     }
-}

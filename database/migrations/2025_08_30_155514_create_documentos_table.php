@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('documentos', function (Blueprint $table) {
             $table->id();
-
-            $table->string('tipo documento',30);
-             $table->string('numero de cocumento',20);
+            
+            $table->string('tipo_documento',30);
+             $table->string('numero_documento',20);
              
-            $table->timestams();
+            $table->timestamps();
         });
     }
 
